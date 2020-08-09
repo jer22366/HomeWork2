@@ -1,0 +1,17 @@
+﻿create DATABASE cy DEFAULT CHARACTER set utf8;
+
+create table customers(customerID int AUTO_INCREMENT primary key,name varchar(10),phone varchar(15));
+
+create table suppliers(supplierID int AUTO_INCREMENT primary key,supplierName varchar(10),phone varchar(15),address varchar(40));
+
+create table orders(orderID int AUTO_INCREMENT primary key,customerID int);
+
+create table `order detail`(orderID int AUTO_INCREMENT primary key,ProductID int,UnitPrice int,Quantity int);
+
+create table products(ProductID int AUTO_INCREMENT primary key,ProductName varchar(15),SupplierID int,UnitPrice int,UnitsOnOrder int);
+
+
+
+
+
+
