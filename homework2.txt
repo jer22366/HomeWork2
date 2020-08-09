@@ -27,3 +27,12 @@ INSERT INTO `order detail`(orderID, ProductID,UnitPrice,Quantity) VALUES (1,1,80
 
 
 ALTER TABLE `order detail` ADD INDEX orderID_productID_index (orderID, ProductID);
+
+
+
+SELECT * FROM products;
+SELECT ProductID ,sum(UnitPrice) as sumPrice FROM `order detail` where ProductID=1;
+SELECT DISTINCT ProductID,UnitPrice Quantity from `order detail`;
+SELECT M.orderID,M.productID,ProductName,ProductName,M.UnitPrice,quantity FROM `order detail` M join orders N on (M.orderID=N.orderID) join products O on (M.productID=O.ProductID) join customers P on (N.customerID=P.customerID);
+
+
